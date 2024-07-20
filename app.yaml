@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-backend
+  labels:
+    app: order-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order-backend
+  template:
+    metadata:
+      labels:
+        app: order-backend
+    spec:
+      containers:
+      - name: order-backend
+        image: order-backend
+        ports:
+        - containerPort: 3000
