@@ -1,2 +1,2 @@
-ctlptl apply -f .\registry.ctlptl
+ctlptl apply -f .\registry.yaml
 tilt up
